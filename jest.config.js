@@ -1,6 +1,6 @@
 module.exports = {
   setupFiles: [],
-  setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ['<rootDir>/config/jestSetupFiles.js'],
   moduleFileExtensions: ['js', 'json', 'node'],
   moduleNameMapper: {},
   collectCoverage: true,
