@@ -1,7 +1,7 @@
 {
   "root": true,
   "parser": "babel-eslint",
-  "extends": ["airbnb", "airbnb/hooks", "prettier", "plugin:ramda/recommended", "plugin:jest/recommended"],
+  "extends": ["airbnb-base", "prettier", "plugin:ramda/recommended", "plugin:jest/recommended"],
   "plugins": ["ramda", "prettier", "babel", "jest"],
   "env": {
     "node": true,

@@ -17,11 +17,9 @@
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "babel-eslint": "^10.0.3",
-    "babel-preset-airbnb": "^4.0.1",
-    "babel-preset-minify": "^0.5.1",
     "cross-env": "^6.0.0",
     "eslint": "^6.4.0",
-    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-import-resolver-jest": "^3.0.0",
     "eslint-import-resolver-node": "^0.3.2",
@@ -37,14 +35,14 @@
     "serve": "^11.2.0"
   },
   "keywords": [
-    "react",
-    "dial",
-    "bookmarks"
+    "json",
+    "dot notation",
+    "ramda"
   ],
   "license": "MIT",
   "name": "@iamsquare/dotfy",
   "description": "A simple utility that transforms JSON objects to their dot notation counterpart and viceversa.",
-  "private": true,
+  "private": false,
   "scripts": {
     "setup": "npm i",
     "clean": "npm-run-all -p clean:*",
