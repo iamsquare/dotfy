@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "airbnb/hooks", "prettier", "plugin:ramda/recommended", "plugin:jest/recommended"],
+  "plugins": ["ramda", "prettier", "babel", "jest"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {},
+      "jest": {
+        "jestConfigFile": "./jest.config.js"
+      }
+    }
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.js", "**/*.spec.js", "./config/*", "./testUtils/*"] }
+    ],
+    "comma-dangle": "off",
+    "arrow-parens": "off",
+    "no-unused-vars": "warn"
+  }
+}

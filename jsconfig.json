@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "es2015", "es2016"],
+    "target": "esnext",
+    "checkJs": true,
+    "paths": {}
+  },
+  "typeAcquisition": {
+    "include": ["jest"]
+  },
+  "include": ["src/*", "testUtils/"],
+  "exclude": ["node_modules", "dist"]
+}

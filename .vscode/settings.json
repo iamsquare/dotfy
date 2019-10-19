@@ -1,0 +1,6 @@
+{
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "eslint.lintTask.enable": false,
+  "todo-tree.filtering.excludeGlobs": ["node_modules/**/*", "dist/**/*"]
+}
