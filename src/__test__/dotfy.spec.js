@@ -53,5 +53,38 @@ describe('Object to dot notation', () => {
           })
         );
     });
+
+    it('Should traverse arrays when the corresponding option is passed', () => {
+      const obj = { a: { b: 2, c: [10, 20] } };
+      expect(dotfy(obj, { traverseArrays: true })).toEqual(
+        expect.objectContaining({
+          'a.b': 2,
+          'a.c.0': 10,
+          'a.c.1': 20
+        })
+      );
+    });
+
+    test('Both options at the same time', () => {
+      const obj = { a: { b: 2, c: [10, 20], d: {}, e: [], f: [{}, { g: 10 }, 20], h: [{}], i: [{}, {}] } };
+      expect(dotfy(obj, { suppressEmpty: true, traverseArrays: true }))
+        .toEqual(
+          expect.objectContaining({
+            'a.b': 2,
+            'a.c.0': 10,
+            'a.c.1': 20,
+            'a.f.1.g': 10,
+            'a.f.2': 20
+          })
+        )
+        .toEqual(
+          expect.not.objectContaining({
+            'a.e': expect.anything(),
+            'a.e.0': expect.anything(),
+            'a.f.0': expect.anything(),
+            'a.h': expect.anything()
+          })
+        );
+    });
   });
 });
